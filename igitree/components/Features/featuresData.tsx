@@ -1,47 +1,35 @@
 import { Feature } from "@/types/feature";
+import image4 from "@/public/images/user/auth-01.png";
+import image5 from "@/public/images/user/auth-02.png";
+import image6 from "@/public/images/user/auth-03.png";
 
-const featuresData: Feature[] = [
+export const featuresData: Feature[] = [
   {
     id: 1,
-    icon: "/images/icon/icon-01.svg",
-    title: "Crafted for SaaS",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    title: "Devid Smith",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    icon: "/images/user/user1.svg",
   },
   {
     id: 2,
-    icon: "/images/icon/icon-02.svg",
-    title: "High-quality Design",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    title: "Jhon Abraham",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+    icon: "/images/user/user2.svg",
   },
   {
     id: 3,
-    icon: "/images/icon/icon-03.svg",
-    title: "Next.js 13 + TypeScript",
+    
+    title: "Devid Smith",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      icon:"/images/user/user3.svg",
   },
   {
     id: 4,
-    icon: "/images/icon/icon-04.svg",
-    title: "Sanity Blog and Docs",
+    title: "Jhon Abraham",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
-  },
-  {
-    id: 5,
-    icon: "/images/icon/icon-05.svg",
-    title: "DB, Auth and Stripe",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
-  },
-  {
-    id: 6,
-    icon: "/images/icon/icon-06.svg",
-    title: "Regular Free Updates",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      icon: "/images/user/user4.svg",
   },
 ];
 
