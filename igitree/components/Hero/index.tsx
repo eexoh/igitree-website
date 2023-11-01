@@ -56,18 +56,19 @@ const Hero = () => {
 
             <div className="animate_right hidden md:w-1/2 lg:block">
               <div className="relative 2xl:-mr-7.5">
-              <div className="flex items-start justify-start w-full pl-0">
-          <div className="ml-0">
-                <Image
-                  src="/images/assets/images/Vector1.png"
-                  width={500}
-                  height={617}
-                  className="object-cover"
-                  alt="Hero Illustration"
-                  loading="eager"
-                />
-                </div>
-                </div>
+              <div className="flex items-start justify-start w-full pl-35">
+  <div className="flex-shrink-0">
+    <Image
+      src="/images/assets/images/Vector1.png"
+      width={500}
+      height={617}
+      className="object-cover"
+      alt="Hero Illustration"
+      loading="eager"
+    />
+  </div>
+</div>
+
               </div>
             </div>
           </div>
