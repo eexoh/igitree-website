@@ -54,7 +54,7 @@ const Contact = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="contact-form-container animate_top rounded-lg bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black flex-1"
+              className="contact-form-container animate_top rounded-md bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-orange-800 flex-1"
             >
               <h2 className="mb-15 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
                 Send a message
@@ -128,7 +128,7 @@ const Contact = () => {
 
                   <button
                     aria-label="send message"
-                    className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 flex font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
+                    className="px-8 py-4 text-lg font-medium text-center text-white bg-orange-700 rounded-md"
                   >
                     Send Message
                     <svg
