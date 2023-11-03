@@ -26,12 +26,12 @@ export default function Home() {
       <Testimonial />
       <Brands />
       <About />
-      {/* <Feature /> */}
       {/* <FeaturesTab /> */}
       {/* <FunFact /> */}
       {/* <Integration /> */}
-      {/* <CTA /> */}
       {/* <Pricing /> */}
+      {/* <CTA /> */}
+      <Feature />
       <Contact />
       {/* <Blog /> */}
     </main>

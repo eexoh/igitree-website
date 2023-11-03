@@ -29,13 +29,13 @@ const About = () => {
               className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
             >
               <Image
-                src="/images/about/about-light-01.png"
+                src="/images/assets/images/Mask.png"
                 alt="About"
                 className="dark:hidden"
                 fill
               />
               <Image
-                src="/images/about/about-dark-01.png"
+                src="/images/assets/images/Mask.png"
                 alt="About"
                 className="hidden dark:block"
                 fill
@@ -59,15 +59,15 @@ const About = () => {
               viewport={{ once: true }}
               className="animate_right md:w-1/2"
             >
-              <span className="text-2xl font-bold text-gray-500">
-                About iGitree
+              <span className="relative mb-6 text-1xl font-bold text-black dark:text-white xl:text-hero">
+               Vison and Mission
               </span>
-              <h2 className="relative mb-6 text-1xl font-bold text-black dark:text-white xl:text-hero">
+              {/* <h2 className="relative mb-6 text-1xl font-bold text-black dark:text-white xl:text-hero">
                 A Complete Solution for
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
                   Genomics
                 </span>
-              </h2>
+              </h2> */}
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                 ultricies lacus non fermentum ultrices. Fusce consectetur le.
@@ -80,8 +80,8 @@ const About = () => {
                   </p>
                 </div>
                 <div className="w-3/4">
-                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                  Lorem ipsum dolor sit amet
+                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white font-bold">
+                  Vision
                   </h3>
                   <p>ultricies lacus non fermentum ultrices. Fusce consectetur le..</p>
                 </div>
@@ -93,8 +93,8 @@ const About = () => {
                   </p>
                 </div>
                 <div className="w-3/4">
-                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Fully Customizable
+                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white font-bold">
+                    Mission
                   </h3>
                   <p>consectetur adipiscing elit fermentum ultricies.</p>
                 </div>

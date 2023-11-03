@@ -98,25 +98,25 @@ const Header = () => {
 
         {/* Nav Menu Start   */}
         <div
-          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
+          className={`invisible h-0 w-full items-center justify-between xl:visible  xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection text-black-500 xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
         >
           <nav>
-            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
+            <ul className="flex flex-col  gap-5 xl:flex-row xl:items-center xl:gap-10">
               {menuData.map((menuItem, key) => (
                 <li key={key} className={menuItem.submenu && "group relative"}>
                   {menuItem.submenu ? (
                     <>
                       <button
                         onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="flex cursor-pointer items-center justify-between gap-3 hover:text-primary"
+                        className="flex cursor-pointer items-center justify-between gap-3 hover:text-orange-500"
                       >
                         {menuItem.title}
                         <span>
                           <svg
-                            className="h-3 w-3 cursor-pointer fill-waterloo group-hover:fill-primary"
+                            className="h-3 w-3 cursor-pointer fill-waterloo group-hover:fill-orange-500"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
                           >
@@ -129,7 +129,7 @@ const Header = () => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-primary">
+                          <li key={key} className="hover:text-orange-500">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -140,8 +140,8 @@ const Header = () => {
                       href={`${menuItem.path}`}
                       className={
                         pathUrl === menuItem.path
-                          ? "text-primary hover:text-primary"
-                          : "hover:text-primary"
+                          ? "text-black-200 hover:text-orange-500"
+                          : "hover:text-black-700"
                       }
                     >
                       {menuItem.title}
