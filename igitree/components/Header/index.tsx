@@ -24,6 +24,11 @@ const Header = () => {
     }
   };
 
+  // Check if the current path is '/auth/signin'
+  if (pathUrl === "/auth/signin") {
+    return null;
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
   });
