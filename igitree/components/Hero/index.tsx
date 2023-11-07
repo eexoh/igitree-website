@@ -29,7 +29,7 @@ const Hero = () => {
                   <div className="flex flex-wrap gap-5">
                     <button
                       aria-label="get started button"
-                      className="px-8 py-4 text-lg font-medium text-center text-white bg-orange-700 rounded-md "
+                      className="px-8 py-4 text-lg font-medium text-center text-white bg-blue-400 rounded-md "
                     >
                       Get Started
                     </button>
@@ -40,7 +40,7 @@ const Hero = () => {
                 rel="noopener"
                 className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
                 <Image
-                src="/images/assets/images/LearnMoreicon.png"
+                src="/images/assets/images/learnblue.png"
                         alt="N"
                         width="34"
                         height="34"

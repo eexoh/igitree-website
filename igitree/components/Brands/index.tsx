@@ -15,8 +15,7 @@ const Brands = () => {
             <SectionHeader
               headerInfo={{
                 title: `Our Partners`,
-                subtitle: `Lorem ipsum dolor sit amet`,
-                description: ``,
+                subtitle: ``,
               }}
             />
           </div>
