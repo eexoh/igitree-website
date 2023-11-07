@@ -32,6 +32,14 @@ const Footer = () => {
                 />
               </Link>
             </motion.div>
+
+            <div className="flex justify-center items-center text-center h-20">
+  <p className="text-sm text-gray-600">
+    © 2023 <span className="text-blue-500">iGiTREE</span>. All rights reserved.
+  </p>
+</div>
+
+
             <ul className="flex items-center gap-8">
               <li>
                 <Link href="/">

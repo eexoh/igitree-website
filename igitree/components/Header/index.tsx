@@ -111,12 +111,12 @@ const Header = () => {
                     <>
                       <button
                         onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="flex cursor-pointer items-center justify-between gap-3 hover:text-orange-500"
+                        className="flex cursor-pointer items-center justify-between gap-3 hover:text-blue-500"
                       >
                         {menuItem.title}
                         <span>
                           <svg
-                            className="h-3 w-3 cursor-pointer fill-waterloo group-hover:fill-orange-500"
+                            className="h-3 w-3 cursor-pointer fill-waterloo group-hover:fill-blue-500"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
                           >
@@ -129,7 +129,7 @@ const Header = () => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-orange-500">
+                          <li key={key} className="hover:text-blue-500">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -140,7 +140,7 @@ const Header = () => {
                       href={`${menuItem.path}`}
                       className={
                         pathUrl === menuItem.path
-                          ? "text-black-200 hover:text-orange-500"
+                          ? "text-black-200 hover:text-blue-500"
                           : "hover:text-black-700"
                       }
                     >
@@ -155,7 +155,7 @@ const Header = () => {
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
             <ThemeToggler />
 
-          <Link href="/" className="px-6 py-2 text-white bg-orange-700 hover:bg-orange-800 rounded-md md:ml-5">
+          <Link href="/" className="px-6 py-2 text-white bg-blue-400 hover:bg-blue-600 rounded-md md:ml-5">
               Join Now
           </Link>
 

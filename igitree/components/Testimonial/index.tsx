@@ -22,7 +22,6 @@ const Testimonial = () => {
               headerInfo={{
                 title: `SERVICE`,
                 subtitle: `What we do`,
-                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
               }}
             />
           </div>
@@ -52,7 +51,7 @@ const Testimonial = () => {
             {/* <!-- Additional required wrapper --> */}
             <Swiper
               spaceBetween={50}
-              slidesPerView={2}
+              slidesPerView={3}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
@@ -68,7 +67,7 @@ const Testimonial = () => {
                 },
                 // when window width is >= 768px
                 768: {
-                  slidesPerView: 2,
+                  slidesPerView: 3,
                 },
               }}
             >
