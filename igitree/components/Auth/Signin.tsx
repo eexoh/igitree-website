@@ -17,15 +17,11 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { Divide } from "lucide-react";
 import Google from "../svg/google";
 import Facebook from "../svg/facebook";
+import ThemeToggler from "../Header/ThemeToggler";
 
 const Signin = () => {
-  const [data, setData] = useState({
-    email: "",
-    password: "",
-  });
 
   //form definition
   const form = useForm<z.infer<typeof signinSchema>>({
@@ -46,15 +42,36 @@ const Signin = () => {
   return (
     <>
       {/* <!-- ===== SignIn Form Start ===== --> */}
-      <section className="h-screen flex justify-center items-center bg-[url('/images/signin/tree.png')] bg-no-repeat bg-cover">
-       <div className="flex flex-col justify-center items-center h-full min-[320px]:h-[550px] w-ful md:w-[550px] border-2 border-[#286d82] bg-[#2e7b93] rounded-none min-[330px]:rounded-3xl bg-opacity-70 border-opacity-49 backdrop-blur-sm shadow-inner-xl px-4 py-2 gap-1">
-         <div className="w-[100%] h-[10%]">
+      <section className="h-screen flex justify-center items-center bg-[url('/images/signin/igitree_bg_login.png')] bg-no-repeat bg-cover">
+      <motion.div
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: -20,
+              },
+
+              visible: {
+                opacity: 1,
+                y: 0,
+              },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 1, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="animate_top dark:border dark:border-strokedark dark:bg-black flex flex-col justify-center items-center h-full min-[320px]:h-[550px] w-full md:w-[550px] border-2 border-[#286d82] bg-[#2e7b93] rounded-none min-[330px]:rounded-3xl bg-opacity-70 border-opacity-49 backdrop-blur-sm shadow-inner-xl px-4 py-2 gap-1"
+          >
+         <div className="w-[100%] h-[10%] flex justify-between">
          <Image
-            src="/images/logo/logo-igitree.png"
+            src="/images/logo/logo_v2.png"
             width={100}
             height={100}
             alt="Igitree logo"
+            className="md:width-[182px] md:height-[90px] h-[60px] w-[60px]"
           />
+          <div className="text-white bg-white flex justify-center items-center rounded-full w-8 h-8 relative">
+          <ThemeToggler/>
+          </div>
          </div>
          <div className="h-[90%] w-[80%] flex flex-col gap-4">
           <h1 className="text-white font-sans font-bold md:font-bold text-md md:text-3xl">Login</h1>
@@ -67,7 +84,7 @@ const Signin = () => {
             <FormItem className="space-y-2">
               <FormLabel className="text-white font-martel-sans text-[12px] md:text-base font-normal">User Email</FormLabel>
               <FormControl>
-                <Input placeholder="email" {...field} className="text-gray-400 font-martel-sans text-sm text-[12px] md:text-sm"/>
+                <Input placeholder="email" {...field} className="text-gray-400 font-martel-sans text-sm text-[12px] md:text-sm bg-white"/>
               </FormControl>
               <FormMessage className="text-red-400"/>
             </FormItem>
@@ -80,7 +97,7 @@ const Signin = () => {
             <FormItem className="space-y-2">
               <FormLabel className="text-white font-martel-sans font-normal text-[12px] md:text-base">password</FormLabel>
               <FormControl>
-                <Input placeholder="password" {...field} className="text-gray-400 font-martel-sans text-[12px] md:text-sm font-normal"/>
+                <Input type="password" placeholder="password" {...field} className="text-gray-400 font-martel-sans text-[12px] md:text-sm font-normal bg-white"/>
               </FormControl>
               <FormMessage className="text-red-400"/>
             </FormItem>
@@ -101,11 +118,11 @@ const Signin = () => {
             </Button>
             </div>
         </div>
-        <p className="text-white font-martel-sans md:text-sm text-[12px] font-normal text-center">Don’t have an account yet? <Link href="/" className="text-white font-martel-sans md:text-sm text-[12px] font-semibold">Register for free</Link></p>
+        <p className="text-white font-martel-sans md:text-sm text-[12px] font-normal text-center">Don’t have an account yet? <Link href="/auth/signup" className="text-white font-martel-sans md:text-sm text-[12px] font-semibold">Register for free</Link></p>
       </form>
     </Form>
          </div>
-       </div>
+       </motion.div>
       </section>
       {/* <!-- ===== SignIn Form End ===== --> */}
     </>
