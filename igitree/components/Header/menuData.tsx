@@ -11,7 +11,7 @@ const menuData: Menu[] = [
     id: 2,
     title: "About Us",
     newTab: false,
-    path: "/#About Us",
+    path: "/#about",
   },
   {
     id: 3,
@@ -22,27 +22,27 @@ const menuData: Menu[] = [
         id: 31,
         title: "Family Tree",
         newTab: false,
-        path: "/",
+        path: "/#",
       },
       {
         id: 34,
         title: "DNA testing kit",
         newTab: false,
-        path: "/",
+        path: "/#",
       },
     ],
   },
   {
     id: 2.1,
-    title: "Prices",
+    title: "Pricing",
     newTab: false,
-    path: "/blog",
+    path: "/#",
   },
   {
     id: 2.3,
     title: "Contact",
     newTab: false,
-    path: "/docs",
+    path: "/#contact",
   },
 ];
 

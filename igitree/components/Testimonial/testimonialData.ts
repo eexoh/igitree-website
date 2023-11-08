@@ -2,9 +2,16 @@ import image1 from "@/public/images/assets/images/tree1.png";
 import image2 from "@/public/images/assets/images/aidriven.png";
 import image3 from "@/public/images/assets/images/aidriven1.png";
 import image4 from "@/public/images/assets/images/aidriven2.png";
-import { Testimonial } from "@/types/testimonial";
 
-export const testimonialData: Testimonial[] = [
+interface Service {
+  id: number;
+  name: string;
+  designation: string;
+  image: string | any;
+  content: string;
+}
+
+export const testimonialData: Service[] = [
   {
     id: 1,
     name: "Family tree building",

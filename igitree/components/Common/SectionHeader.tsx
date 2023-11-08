@@ -2,12 +2,13 @@
 import { motion } from "framer-motion";
 
 type HeaderInfo = {
-  title: string;
-  subtitle: string;
+  title: string | React.ReactNode;
+  subtitle?: string | React.ReactNode;
+  darkClass?: string;
 };
 
 const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
-  const { title, subtitle } = headerInfo;
+  const { title, subtitle, darkClass } = headerInfo;
 
   return (
     <>
@@ -30,13 +31,23 @@ const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
         viewport={{ once: true }}
         className="animate_top mx-auto text-center"
       >
-        <div className="mb-4 font-bold px-4.5 py-1.5">
-          <span className="text-sectiontitle font-medium text-black dark:text-white">
-            {subtitle}
-          </span>
-        </div>
-        <h2 className="mx-auto mb-4 text-3xl px-4.5 py-1.5 font-bold text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">
-        {title} 
+        {subtitle && (
+          <div className="mb-2 px-4.5 py-1.5 font-bold">
+            <span
+              className={`text-sectiontitle font-medium uppercase text-gray-600 ${
+                darkClass || "dark:text-white"
+              }`}
+            >
+              {subtitle}
+            </span>
+          </div>
+        )}
+        <h2
+          className={`mx-auto mb-4 px-4.5 text-3xl font-bold capitalize text-black md:w-4/5 xl:w-1/2 xl:text-sectiontitle3 ${
+            darkClass || "dark:text-white"
+          }`}
+        >
+          {title}
         </h2>
       </motion.div>
       {/* <!-- Section Title End --> */}

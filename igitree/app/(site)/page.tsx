@@ -24,7 +24,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <Testimonial />
-      <Brands />
+      {/* <Brands /> */}
       <About />
       {/* <FeaturesTab /> */}
       {/* <FunFact /> */}

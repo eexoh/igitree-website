@@ -7,22 +7,23 @@ const About = () => {
   return (
     <>
       {/* <!-- ===== About Start ===== --> */}
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
-      <div className="mx-auto max-w-c-1315 py-11 px-4 md:px-8 xl:px-0">
+      <section className="overflow-hidden bg-gray-50 py-[4rem]" id="about">
+        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
           <div className="animate_top mx-auto text-center">
             <SectionHeader
               headerInfo={{
-                title: `Vison and Mission`,
-                subtitle: ``,
+                title: "Vison and Mission",
+                subtitle: "About Us",
+                darkClass: "dark:text-black",
               }}
             />
           </div>
           {/* <!-- Section Title End --> */}
         </div>
 
-        <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
+        <div className="mx-auto mt-[3rem] max-w-c-1235 px-4 md:px-8 xl:px-0">
+          <div className="flex flex-col-reverse items-center gap-[1rem] md:flex-row lg:gap-32.5">
             <motion.div
               variants={{
                 hidden: {
@@ -41,31 +42,45 @@ const About = () => {
               viewport={{ once: true }}
               className="animate_right md:w-1/2"
             >
-              
               <div className="mt-7.5 flex items-center gap-5">
-                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                <div className="flex hidden h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
                   <p className="text-metatitle2 font-semibold text-black dark:text-white">
                     01
                   </p>
                 </div>
-                <div className="w-3/4">
-                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white font-bold">
-                  Vision
+                <div className="md:w-3/4">
+                  <h3 className="mb-1 text-metatitle2 font-bold text-blue-600 dark:text-white">
+                    Vision
                   </h3>
-                  <p>ultricies lacus non fermentum ultrices. Fusce consectetur le..</p>
+                  <p className="lg:text-justify">
+                    Our vision is a world where every person, regardless of
+                    their background, can effortlessly trace their roots,
+                    reconnect with loved ones, and preserve their unique family
+                    narratives. Through innovative technology and a commitment
+                    to humanitarian causes, we aspire to be the global leader in
+                    family unity, DNA discovery, and ancestral heritage
+                    celebration.
+                  </p>
                 </div>
               </div>
               <div className="mt-7.5 flex items-center gap-5">
-                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                <div className="flex hidden h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
                   <p className="text-metatitle2 font-semibold text-black dark:text-white">
                     02
                   </p>
                 </div>
-                <div className="w-3/4">
-                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white font-bold">
+                <div className="md:w-3/4">
+                  <h3 className="mb-1 text-metatitle2 font-bold text-blue-600 dark:text-white">
                     Mission
                   </h3>
-                  <p>consectetur adipiscing elit fermentum ultricies.</p>
+                  <p className="lg:text-justify">
+                    At iGiTREE, our mission is to bridge the gaps of time and
+                    distance, empowering individuals and communities to explore,
+                    discover, and celebrate their family heritage. We're
+                    dedicated to reuniting families, cultivating a sense of
+                    belonging, and nurturing the world's most precious
+                    connections.
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -85,7 +100,7 @@ const About = () => {
               whileInView="visible"
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
+              className="animate_left relative mx-auto block aspect-[588/526.5] w-full md:w-1/2"
             >
               <Image
                 src="/images/assets/images/Mask.png"
@@ -104,8 +119,7 @@ const About = () => {
         </div>
       </section>
       {/* <!-- ===== About End ===== --> */}
-
-      </>
+    </>
   );
 };
 

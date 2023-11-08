@@ -3,6 +3,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionHeader from "../Common/SectionHeader";
 import React from "react";
+import LinkedInIcon from "../Icons/LinkedInIcon";
+import InstagramIcon from "../Icons/InstagramIcon";
+import Link from "next/link";
+import PhoneIcon from "../Icons/PhoneIcon";
+import FaxIcon from "../Icons/FaxIcon";
+import EnvelopeIcon from "../Icons/EnvelopeIcon";
 
 const Contact = () => {
   /**
@@ -20,19 +26,24 @@ const Contact = () => {
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
-      <section id="support" className="px-0 md:px-8 2xl:px-0">
-        <div className="relative mx-auto max-w-c-1390 px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
+      <section
+        id="contact"
+        className="bg-gray-50 px-0 py-[4rem] md:px-8 2xl:px-0"
+      >
+        <div className="relative mx-auto max-w-c-1390 px-7.5 lg:px-15 xl:px-20">
           <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
             {/* <!-- Section Title Start --> */}
-            <div className="animate_top mx-auto text-center">
+            <div className="animate_top mx-auto mb-[3rem] text-center">
               <SectionHeader
                 headerInfo={{
                   title: (
-                    <>
-                      Get in <span style={{ color: "#26B1FF" }}>Touch</span>
-                    </>
+                    <div className="flex items-center justify-center gap-1 whitespace-nowrap">
+                      <span className="dark:text-black">Get in</span>
+                      <span className="text-[#26B1FF]">Touch</span>
+                    </div>
                   ),
-                  subtitle: ``,
+                  subtitle: "Contact Us",
+                  darkClass: "dark:text-black",
                 }}
               />
             </div>
@@ -53,108 +64,152 @@ const Contact = () => {
               fill
             />
           </div>
+          <div className="flex flex-col gap-[2.5rem]">
+            <div className="grid grid-cols-1 gap-[1.5rem] md:grid-cols-2">
+              <motion.div
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    y: -20,
+                  },
 
-          <div className="flex flex-col items-start justify-between gap-x-4 lg:flex-row">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  y: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="contact-form-container animate_top w-full flex-1 rounded-md bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-orange-800"
-            >
-              <h2 className="mb-15 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
-                Send a message
-              </h2>
-
-              <form
-                action="https://formbold.com/s/unique_form_id"
-                method="POST"
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                  },
+                }}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 1, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="contact-form-container animate_top order-2 flex w-full flex-col gap-[1rem] md:order-1"
               >
-                <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
+                <p className="text-center text-[13px] font-[500] text-black dark:text-gray-500 md:text-start md:text-[15px]">
+                  Enim tempor eget pharetra facilisis sed maecenas adipiscing.
+                  Eu leo molestie vel, ornare non id blandit netus.
+                </p>
+
+                <form className="flex flex-col gap-[1rem]">
                   <input
                     type="text"
-                    placeholder="Name"
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    className="dark:shadow-sm-light block w-full border border-gray-300 bg-white p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-blacksection dark:text-white dark:placeholder-white dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                    placeholder="Name *"
+                    required
                   />
 
                   <input
                     type="email"
-                    placeholder="Email address"
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
-                  />
-                </div>
-
-                <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    className="dark:shadow-sm-light block w-full border border-gray-300 bg-white p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-blacksection dark:text-white dark:placeholder-white dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                    placeholder="Email address *"
+                    required
                   />
 
                   <input
-                    type="text"
-                    placeholder="Phone number"
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    type="tel"
+                    className="dark:shadow-sm-light block w-full border border-gray-300 bg-white p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-blacksection dark:text-white dark:placeholder-white dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                    placeholder="Phone number *"
+                    required
                   />
-                </div>
 
-                <div className="mb-11.5 flex">
-                  <textarea
-                    placeholder="Message"
-                    rows={4}
-                    className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
-                  ></textarea>
-                </div>
-
-                <div className="flex flex-wrap gap-4 xl:justify-between ">
-                  <button
-                    aria-label="send message"
-                    className="mx-auto flex w-full items-center justify-center whitespace-nowrap rounded-md bg-blue-400 px-8 py-4 text-center text-lg font-medium text-white"
+                  <select
+                    className="dark:shadow-sm-light block w-full border border-gray-300 bg-white p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-blacksection dark:text-white dark:placeholder-white dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                    placeholder="Phone number *"
                   >
-                    Send Message
+                    <option value="" selected>
+                      How did you find us?
+                    </option>
+                  </select>
+
+                  <button className="w-full whitespace-nowrap bg-blue-400 px-4 py-2 text-white hover:bg-blue-600">
+                    SEND
                   </button>
+                </form>
+              </motion.div>
+
+              <motion.div
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    y: -20,
+                  },
+
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                  },
+                }}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 2, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="contact-map-container animate_top order-1 h-[250px] flex-1 overflow-hidden rounded-[30px] md:order-2 md:h-auto"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5050597124928!2d30.057418273351104!3d-1.9511665367108655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca5a86d814c61%3A0x7d3b83e12b1c11a9!2sNorrsken%20House%20Kigali!5e0!3m2!1sen!2srw!4v1698834083249!5m2!1sen!2srw"
+                  width="100%"
+                  height="100%"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </motion.div>
+            </div>
+
+            <div className="flex flex-col items-start gap-[1rem] text-[14px] md:flex-row md:items-center">
+              <Link href="#" className="flex items-center gap-[3px]">
+                <LinkedInIcon />
+                <span className="mt-[5px] leading-[0px] text-black">
+                  LinkedIn
+                </span>
+              </Link>
+
+              <Link href="#" className="flex items-center gap-[3px]">
+                <InstagramIcon />
+                <span className="mt-[5px] leading-[0px] text-black">
+                  Instagram
+                </span>
+              </Link>
+            </div>
+
+            <div className="flex flex-col items-start gap-[2rem] md:flex-row md:items-center ">
+              <div className="flex items-center gap-[.75rem]">
+                <PhoneIcon />
+
+                <div className="flex flex-col gap-[1.25rem] text-[12px]">
+                  <span className="font-bold uppercase leading-[0px] text-black">
+                    Phone
+                  </span>
+                  <span className="whitespace-nowrap leading-[0px] text-blue-500">
+                    (+250) 7879 619 83
+                  </span>
                 </div>
-              </form>
-            </motion.div>
+              </div>
 
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  y: -20,
-                },
+              <div className="flex items-center gap-[.75rem]">
+                <FaxIcon />
 
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 2, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="contact-map-container animate_top flex-1"
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5050597124928!2d30.057418273351104!3d-1.9511665367108655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca5a86d814c61%3A0x7d3b83e12b1c11a9!2sNorrsken%20House%20Kigali!5e0!3m2!1sen!2srw!4v1698834083249!5m2!1sen!2srw"
-                width="100%"
-                height="500"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </motion.div>
+                <div className="flex flex-col gap-[1.25rem] text-[12px]">
+                  <span className="font-bold uppercase leading-[0px] text-black">
+                    Fax
+                  </span>
+                  <span className="whitespace-nowrap leading-[0px] text-blue-500">
+                    03 5432 1234
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-[.75rem]">
+                <EnvelopeIcon />
+
+                <div className="flex flex-col gap-[1.25rem] text-[12px]">
+                  <span className="font-bold uppercase leading-[0px] text-black">
+                    Email
+                  </span>
+                  <span className="whitespace-nowrap leading-[0px] text-blue-500">
+                    info@igitree.com
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
