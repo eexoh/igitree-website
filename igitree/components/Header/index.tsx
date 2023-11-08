@@ -50,20 +50,14 @@ const Header = () => {
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/">
-            <Image
-              src="/images/assets/images/Logo4.png"
-              alt="logo"
-              width={119.03}
-              height={30}
-              className="hidden w-full dark:block"
-            />
-            <Image
-              src="/images/assets/images/Logo4.png"
-              alt="logo"
-              width={119.03}
-              height={30}
-              className="w-full dark:hidden"
-            />
+            <div className="relative h-[90px] w-[90px]">
+              <Image
+                src="/images/logo/logo.png"
+                alt="logo"
+                fill
+                className="w-full"
+              />
+            </div>
           </a>
 
           {/* <!-- Hamburger Toggle BTN --> */}
@@ -111,7 +105,7 @@ const Header = () => {
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible  xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection text-black-500 xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
         >
           <nav>
@@ -122,7 +116,9 @@ const Header = () => {
                     <>
                       <button
                         onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="flex cursor-pointer items-center justify-between gap-3 hover:text-blue-500"
+                        className={`flex cursor-pointer items-center justify-between gap-3 font-bold text-black hover:text-blue-500 ${
+                          stickyMenu ? "dark:text-white" : ""
+                        }`}
                       >
                         {menuItem.title}
                         <span>
@@ -149,11 +145,15 @@ const Header = () => {
                   ) : (
                     <Link
                       href={`${menuItem.path}`}
-                      className={
-                        pathUrl === menuItem.path
-                          ? "text-black-200 hover:text-blue-500"
-                          : "hover:text-black-700"
-                      }
+                      // className={
+                      //   pathUrl === menuItem.path
+                      //     ? "font-bold text-black hover:text-blue-500 "
+                      //     : "font-bold text-black hover:text-blue-500 "
+                      // }
+
+                      className={`font-bold text-black hover:text-blue-500 ${
+                        stickyMenu ? "dark:text-white" : ""
+                      } ${pathUrl === menuItem.path ? "underline" : ""}`}
                     >
                       {menuItem.title}
                     </Link>
@@ -166,14 +166,27 @@ const Header = () => {
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
             <ThemeToggler />
 
-          <Link href="/" className="px-6 py-2 text-white bg-blue-400 hover:bg-blue-600 rounded-md md:ml-5">
+            <Link
+              href="/"
+              className="rounded-md bg-blue-400 px-6 py-2 text-white hover:bg-blue-600 md:ml-5"
+            >
               Join Now
           </Link>
 
           <Link href="/auth/signin" >
           <h1 className="pt-2 pr-2 text font-bold">Log in</h1>
           </Link>
+            </Link>
 
+            <Link href="/">
+              <h1
+                className={`pr-2 pt-2 font-bold text-black hover:text-blue-500 ${
+                  stickyMenu ? "dark:text-white" : ""
+                }`}
+              >
+                Log in
+              </h1>
+            </Link>
           </div>
         </div>
       </div>
