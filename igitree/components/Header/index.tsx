@@ -161,13 +161,13 @@ const Header = () => {
             <ThemeToggler />
 
             <Link
-              href="/"
+              href="/auth/signup"
               className="rounded-md bg-blue-400 px-6 py-2 text-white hover:bg-blue-600 md:ml-5"
             >
               Join Now
             </Link>
 
-            <Link href="/">
+            <Link href="/auth/signin">
               <h1
                 className={`pr-2 pt-2 font-bold text-black hover:text-blue-500 ${
                   stickyMenu ? "dark:text-white" : ""

@@ -16,33 +16,31 @@ const Footer = () => {
     <>
       <footer className="border-t border-stroke bg-white px-2 dark:border-strokedark dark:bg-blacksection lg:px-6">
         <div className="max-w-c-100 mx-auto px-4 md:px-8 2xl:px-0">
-          <div className="flex flex-col items-center justify-between py-7 lg:flex-row">
+          <div className="flex flex-col items-center justify-between gap-[1.5rem] py-7 text-[14px] md:text-[1rem] lg:flex-row">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.1 }}
-              className="flex items-center"
+              className="flex flex-col items-center gap-[1rem] md:flex-row md:gap-[3rem]"
             >
               <Link href="/">
-                <div className="relative h-[80px] w-[80px]">
+                <div className="relative h-[90px] w-[90px]">
                   <Image
-                    src="/images/logo/logo.png"
+                    src="/images/Logo4.ico"
                     alt="logo"
                     fill
                     className="w-full"
                   />
                 </div>
               </Link>
+
+              <div className="whitespace-nowrap">
+                © 2023 <span className="font-bold text-blue-400">iGiTREE</span>
+                . All rights reserved.
+              </div>
             </motion.div>
 
-            <div className="flex h-20 flex-col items-center justify-center whitespace-nowrap text-center lg:flex-row">
-              <p className="text-sm text-gray-600">
-                © 2023 <span className="text-blue-500">iGiTREE</span>. All
-                rights reserved.
-              </p>
-            </div>
-
-            <ul className="flex flex-col items-center gap-8 lg:flex lg:flex-row">
+            <ul className="hidden flex-col items-center gap-[.5rem] md:flex lg:flex lg:flex-row">
               <li>
                 <Link href="/">
                   <span className="hover:text-orange-700">Home</span>

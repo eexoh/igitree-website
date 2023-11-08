@@ -27,7 +27,7 @@ const Contact = () => {
     <>
       {/* <!-- ===== Contact Start ===== --> */}
       <section
-        id="support"
+        id="contact"
         className="bg-gray-50 px-0 py-[4rem] md:px-8 2xl:px-0"
       >
         <div className="relative mx-auto max-w-c-1390 px-7.5 lg:px-15 xl:px-20">
@@ -84,7 +84,7 @@ const Contact = () => {
                 viewport={{ once: true }}
                 className="contact-form-container animate_top order-2 flex w-full flex-col gap-[1rem] md:order-1"
               >
-                <p className="text-center text-[13px] font-[600] text-black dark:text-gray-500 md:text-start md:text-[15px]">
+                <p className="text-center text-[13px] font-[500] text-black dark:text-gray-500 md:text-start md:text-[15px]">
                   Enim tempor eget pharetra facilisis sed maecenas adipiscing.
                   Eu leo molestie vel, ornare non id blandit netus.
                 </p>
