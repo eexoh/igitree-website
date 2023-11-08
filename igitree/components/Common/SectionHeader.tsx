@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 
 type HeaderInfo = {
-  title: string;
-  subtitle?: string;
+  title: string | React.ReactNode;
+  subtitle?: string | React.ReactNode;
 };
 
 const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
@@ -37,7 +37,7 @@ const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
             </span>
           </div>
         )}
-        <h2 className="mx-auto mb-4 px-4.5 text-3xl font-bold text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">
+        <h2 className="mx-auto mb-4 px-4.5 text-3xl font-bold capitalize text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">
           {title}
         </h2>
       </motion.div>
