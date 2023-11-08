@@ -4,15 +4,15 @@ import GoogleIcon from "../Icons/GoogleIcon";
 
 const HeroSection = () => {
   return (
-    <div className="hero-bg min-h-[50vh] pb-[2rem] pt-[12rem] md:min-h-[80vh]">
-      <div className="mx-auto flex max-w-c-1390 justify-between gap-[2rem] px-4 md:px-8 xl:flex 2xl:px-0">
-        <div className="flex w-2/5 flex-col gap-4">
+    <div className="hero-bg min-h-[50vh] pb-[2rem] pt-[10rem] md:min-h-[80vh] lg:pt-[12rem]">
+      <div className="mx-auto flex max-w-c-1390 flex-col justify-between gap-[3rem] px-4 md:px-8 lg:flex-row xl:flex 2xl:px-0">
+        <div className="flex flex-col gap-4 lg:w-2/5">
           <div className="flex flex-col gap-[1.5rem] rounded-[24px] border-[1px] border-solid border-[#D9D9D9] bg-[#ffffffb3] p-[1.5rem]">
-            <h2 className="text-[64px] font-[600] leading-[72px] text-[#373737]">
+            <h2 className="text-center text-[25px] font-[600] leading-[35px] text-[#373737] sm:text-[30px] md:text-[40px] lg:text-start lg:text-[64px] lg:leading-[72px]">
               Uncover Your Ancestry with iGiTREE
             </h2>
 
-            <div className="flex flex-col gap-[1.25rem] text-justify text-[1rem] font-[300] text-[#414141]">
+            <div className="flex flex-col gap-[1.25rem] text-[1rem] font-[300] text-[#414141] lg:text-justify">
               <p>
                 We want to make DNA testing and matching as simple and
                 user-friendly as attainable, while also offering a robust set of
@@ -28,12 +28,12 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <button className="w-max whitespace-nowrap rounded-md bg-blue-400 px-6 py-3 text-white hover:bg-blue-600">
+          <button className="hidden w-max rounded-md bg-blue-400 px-6 py-3 text-white hover:bg-blue-600 lg:block">
             Get Started
           </button>
         </div>
-        <div className="flex w-1/3 flex-col items-center gap-6">
-          <h2 className="text-[24px] font-[600] leading-[44px] text-black">
+        <div className="flex flex-col items-center gap-6 lg:w-1/3">
+          <h2 className="text-center text-[24px] font-[600] leading-[35px] text-black lg:text-start lg:leading-[44px]">
             Get Started With iGiTREE
           </h2>
 

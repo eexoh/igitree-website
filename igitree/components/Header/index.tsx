@@ -39,20 +39,6 @@ const Header = () => {
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/">
-            {/* <Image
-              src="/images/assets/images/Logo4.png"
-              alt="logo"
-              width={119.03}
-              height={30}
-              className="hidden w-full dark:block"
-            />
-            <Image
-              src="/images/assets/images/Logo4.png"
-              alt="logo"
-              width={119.03}
-              height={30}
-              className="w-full dark:hidden"
-            /> */}
             <div className="relative h-[90px] w-[90px]">
               <Image
                 src="/images/logo/logo-igitree.png"
