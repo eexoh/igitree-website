@@ -34,7 +34,6 @@ const Header = () => {
     return null;
   }
 
-
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
   });
@@ -171,11 +170,6 @@ const Header = () => {
               className="rounded-md bg-blue-400 px-6 py-2 text-white hover:bg-blue-600 md:ml-5"
             >
               Join Now
-          </Link>
-
-          <Link href="/auth/signin" >
-          <h1 className="pt-2 pr-2 text font-bold">Log in</h1>
-          </Link>
             </Link>
 
             <Link href="/auth/signin">
