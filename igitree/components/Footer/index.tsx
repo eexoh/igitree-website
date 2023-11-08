@@ -12,6 +12,11 @@ const Footer = () => {
     return null;
   }
 
+  // Check if the current path is '/auth/signup'
+  if (pathUrl === "/auth/signup") {
+    return null;
+  }
+
   return (
     <>
       <footer className="mx-auto max-w-c-1390 items-center justify-between border-t border-stroke bg-white px-4 dark:bg-transparent">
