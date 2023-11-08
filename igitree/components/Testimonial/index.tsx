@@ -1,5 +1,4 @@
 "use client";
-import SectionHeader from "../Common/SectionHeader";
 
 import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
@@ -7,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import SectionHeader from "../Common/SectionHeader";
 import { motion } from "framer-motion";
 import SingleTestimonial from "./SingleTestimonial";
 import { testimonialData } from "./testimonialData";
@@ -14,14 +14,14 @@ import { testimonialData } from "./testimonialData";
 const Testimonial = () => {
   return (
     <>
-      <section>
+      <section className="py-[3rem]">
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
           <div className="animate_top mx-auto text-center">
             <SectionHeader
               headerInfo={{
-                title: `SERVICE`,
-                subtitle: `What we do`,
+                title: `What we do`,
+                subtitle: `SERVICE`,
               }}
             />
           </div>
@@ -47,7 +47,7 @@ const Testimonial = () => {
           className="animate_top mx-auto mt-15 max-w-c-1235 px-4 md:px-8 xl:mt-20 xl:px-0"
         >
           {/* <!-- Slider main container --> */}
-          <div className="swiper testimonial-01 mb-20 pb-22.5">
+          <div className="swiper testimonial-01 pb-22.5">
             {/* <!-- Additional required wrapper --> */}
             <Swiper
               spaceBetween={50}
@@ -67,6 +67,11 @@ const Testimonial = () => {
                 },
                 // when window width is >= 768px
                 768: {
+                  slidesPerView: 2,
+                },
+
+                // when window width is >= 1024px
+                1024: {
                   slidesPerView: 3,
                 },
               }}
