@@ -6,7 +6,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection">
+      <footer className="border-t border-stroke bg-white px-2 dark:border-strokedark dark:bg-blacksection lg:px-6">
         <div className="max-w-c-100 mx-auto px-4 md:px-8 2xl:px-0">
           <div className="flex flex-col items-center justify-between py-7 lg:flex-row">
             <motion.div
@@ -40,7 +40,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <ul className="flex flex-col items-center gap-8 lg:flex">
+            <ul className="flex flex-col items-center gap-8 lg:flex lg:flex-row">
               <li>
                 <Link href="/">
                   <span className="hover:text-orange-700">Home</span>

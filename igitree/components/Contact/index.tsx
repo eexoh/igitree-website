@@ -20,7 +20,7 @@ const Contact = () => {
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
-      <section id="support" className="px-4 md:px-8 2xl:px-0">
+      <section id="support" className="px-0 md:px-8 2xl:px-0">
         <div className="relative mx-auto max-w-c-1390 px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
           <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
             {/* <!-- Section Title Start --> */}
@@ -120,7 +120,7 @@ const Contact = () => {
                 <div className="flex flex-wrap gap-4 xl:justify-between ">
                   <button
                     aria-label="send message"
-                    className="mx-auto flex w-full items-center justify-center rounded-md bg-blue-400 px-8 py-4 text-center text-lg font-medium text-white"
+                    className="mx-auto flex w-full items-center justify-center whitespace-nowrap rounded-md bg-blue-400 px-8 py-4 text-center text-lg font-medium text-white"
                   >
                     Send Message
                   </button>
