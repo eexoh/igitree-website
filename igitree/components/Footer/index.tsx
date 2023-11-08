@@ -14,7 +14,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="border-t border-stroke bg-white px-2 dark:border-strokedark dark:bg-blacksection lg:px-6">
+      <footer className="mx-auto max-w-c-1390 items-center justify-between border-t border-stroke bg-white px-4 dark:bg-transparent">
         <div className="max-w-c-100 mx-auto px-4 md:px-8 2xl:px-0">
           <div className="flex flex-col items-center justify-between gap-[1.5rem] py-7 text-[14px] md:text-[1rem] lg:flex-row">
             <motion.div
@@ -40,25 +40,25 @@ const Footer = () => {
               </div>
             </motion.div>
 
-            <ul className="hidden flex-col items-center gap-[.5rem] md:flex lg:flex lg:flex-row">
+            <ul className="hidden flex-col items-center gap-[.75rem] md:flex lg:flex lg:flex-row">
               <li>
                 <Link href="/">
-                  <span className="hover:text-orange-700">Home</span>
+                  <span className="hover:text-blue-400">Home</span>
                 </Link>
               </li>
               <li>
-                <Link href="/about-us">
-                  <span className="hover:text-orange-700">About Us</span>
+                <Link href="/#about">
+                  <span className="hover:text-blue-400">About Us</span>
                 </Link>
               </li>
               <li>
-                <Link href="/features">
-                  <span className="hover:text-orange-700">Features</span>
+                <Link href="/#">
+                  <span className="hover:text-blue-400">Features</span>
                 </Link>
               </li>
               <li>
-                <Link href="/pricing">
-                  <span className="hover:text-orange-700">Pricing</span>
+                <Link href="/#">
+                  <span className="hover:text-blue-400">Pricing</span>
                 </Link>
               </li>
             </ul>

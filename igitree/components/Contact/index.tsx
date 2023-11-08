@@ -157,14 +157,14 @@ const Contact = () => {
             <div className="flex flex-col items-start gap-[1rem] text-[14px] md:flex-row md:items-center">
               <Link href="#" className="flex items-center gap-[3px]">
                 <LinkedInIcon />
-                <span className="mt-[5px] leading-[0px] text-black dark:text-white">
+                <span className="mt-[5px] leading-[0px] text-black">
                   LinkedIn
                 </span>
               </Link>
 
               <Link href="#" className="flex items-center gap-[3px]">
                 <InstagramIcon />
-                <span className="mt-[5px] leading-[0px] text-black dark:text-white">
+                <span className="mt-[5px] leading-[0px] text-black">
                   Instagram
                 </span>
               </Link>
@@ -175,7 +175,7 @@ const Contact = () => {
                 <PhoneIcon />
 
                 <div className="flex flex-col gap-[1.25rem] text-[12px]">
-                  <span className="font-bold uppercase leading-[0px] text-black dark:text-white">
+                  <span className="font-bold uppercase leading-[0px] text-black">
                     Phone
                   </span>
                   <span className="whitespace-nowrap leading-[0px] text-blue-500">
@@ -188,7 +188,7 @@ const Contact = () => {
                 <FaxIcon />
 
                 <div className="flex flex-col gap-[1.25rem] text-[12px]">
-                  <span className="font-bold uppercase leading-[0px] text-black dark:text-white">
+                  <span className="font-bold uppercase leading-[0px] text-black">
                     Fax
                   </span>
                   <span className="whitespace-nowrap leading-[0px] text-blue-500">
@@ -201,7 +201,7 @@ const Contact = () => {
                 <EnvelopeIcon />
 
                 <div className="flex flex-col gap-[1.25rem] text-[12px]">
-                  <span className="font-bold uppercase leading-[0px] text-black dark:text-white">
+                  <span className="font-bold uppercase leading-[0px] text-black">
                     Email
                   </span>
                   <span className="whitespace-nowrap leading-[0px] text-blue-500">
