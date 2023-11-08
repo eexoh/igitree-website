@@ -110,7 +110,9 @@ const Header = () => {
                     <>
                       <button
                         onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="flex cursor-pointer items-center justify-between gap-3 font-bold text-black hover:text-blue-500"
+                        className={`flex cursor-pointer items-center justify-between gap-3 font-bold text-black hover:text-blue-500 ${
+                          stickyMenu ? "dark:text-white" : ""
+                        }`}
                       >
                         {menuItem.title}
                         <span>
@@ -137,11 +139,15 @@ const Header = () => {
                   ) : (
                     <Link
                       href={`${menuItem.path}`}
-                      className={
-                        pathUrl === menuItem.path
-                          ? "font-bold text-black hover:text-blue-500"
-                          : "font-bold text-black hover:text-blue-500"
-                      }
+                      // className={
+                      //   pathUrl === menuItem.path
+                      //     ? "font-bold text-black hover:text-blue-500 "
+                      //     : "font-bold text-black hover:text-blue-500 "
+                      // }
+
+                      className={`font-bold text-black hover:text-blue-500 ${
+                        stickyMenu ? "dark:text-white" : ""
+                      } ${pathUrl === menuItem.path ? "underline" : ""}`}
                     >
                       {menuItem.title}
                     </Link>
@@ -162,7 +168,11 @@ const Header = () => {
             </Link>
 
             <Link href="/">
-              <h1 className="pr-2 pt-2 font-bold text-black hover:text-blue-500">
+              <h1
+                className={`pr-2 pt-2 font-bold text-black hover:text-blue-500 ${
+                  stickyMenu ? "dark:text-white" : ""
+                }`}
+              >
                 Log in
               </h1>
             </Link>

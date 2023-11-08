@@ -24,20 +24,14 @@ const Footer = () => {
               className="flex items-center"
             >
               <Link href="/">
-                <Image
-                  width={110}
-                  height={80}
-                  src="/images/assets/images/Logo4.png"
-                  alt="Logo"
-                  className="dark:hidden"
-                />
-                <Image
-                  width={110}
-                  height={80}
-                  src="/images/logo/logo-dark.svg"
-                  alt="Logo"
-                  className="hidden dark:block"
-                />
+                <div className="relative h-[80px] w-[80px]">
+                  <Image
+                    src="/images/logo/logo.png"
+                    alt="logo"
+                    fill
+                    className="w-full"
+                  />
+                </div>
               </Link>
             </motion.div>
 
