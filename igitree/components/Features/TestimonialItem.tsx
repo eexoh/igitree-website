@@ -12,7 +12,7 @@ const TestimonialItem = ({ item }: Props) => {
         <Image src={item.img} fill alt="Testimonial" />
       </div>
 
-      <div className="w-full text-center text-[15px] font-[400] text-black dark:text-white md:w-[90%] md:text-justify md:text-[18px]">
+      <div className="w-full text-center text-[15px] font-[400] text-black dark:text-gray-500 md:w-[90%] md:text-justify md:text-[18px]">
         {item.content}
       </div>
     </div>

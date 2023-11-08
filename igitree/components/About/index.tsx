@@ -15,6 +15,7 @@ const About = () => {
               headerInfo={{
                 title: "Vison and Mission",
                 subtitle: "About Us",
+                darkClass: "dark:text-black",
               }}
             />
           </div>
