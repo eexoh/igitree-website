@@ -24,6 +24,11 @@ const Header = () => {
     }
   };
 
+  // Check if the current path is '/auth/signin'
+  if (pathUrl === "/auth/signin") {
+    return null;
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
   });
@@ -41,7 +46,7 @@ const Header = () => {
           <a href="/">
             <div className="relative h-[90px] w-[90px]">
               <Image
-                src="/images/logo/logo-igitree.png"
+                src="/images/logo/logo.png"
                 alt="logo"
                 fill
                 className="w-full"
