@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 type HeaderInfo = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
 };
 
 const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
@@ -30,11 +30,13 @@ const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
         viewport={{ once: true }}
         className="animate_top mx-auto text-center"
       >
-        <div className="mb-2 px-4.5 py-1.5 font-bold">
-          <span className="text-sectiontitle font-medium text-gray-600 dark:text-white">
-            {subtitle}
-          </span>
-        </div>
+        {subtitle && (
+          <div className="mb-2 px-4.5 py-1.5 font-bold">
+            <span className="text-sectiontitle font-medium uppercase text-gray-600 dark:text-white">
+              {subtitle}
+            </span>
+          </div>
+        )}
         <h2 className="mx-auto mb-4 px-4.5 text-3xl font-bold text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">
           {title}
         </h2>
